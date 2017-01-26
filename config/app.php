@@ -15,6 +15,11 @@ return [
     'name' => 'Laravel',
 
     /*
+     * Pages
+     */
+    'links' => ['home', 'contact', 'about', 'news', 'requests', 'online', 'phones', 'chrome', 'php', 'mysql'],
+
+    /*
     |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------

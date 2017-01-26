@@ -11,6 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Auth::routes();
+
+Route::group(['middleware' => 'visitors'], function () {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    foreach (\Config::get('app.links') as $item) {
+        Route::get($item, 'HomeController@' . $item);
+    }
 });
